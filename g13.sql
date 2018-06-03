@@ -5,5 +5,6 @@ create table g13_records (
     notified timestamp default now(), 
     nominated timestamp,
     PRIMARY KEY (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
 create unique index g13_notify on g13_records (article,editor);
